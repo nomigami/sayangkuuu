@@ -117,7 +117,7 @@ export default function OurStory() {
           </motion.button>
         )}
         
-             <p className= "text-1xl font-stretch-75% items-center gap-2 py-3">
+             <p className= "text-1xl font-stretch-75% items-center gap-2 py-3 text-balance mask-radial-from-stone-400 mt-3 text-red-600">
             klik dulu sampai selesai yang sayang
         </p>
         
