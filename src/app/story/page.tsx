@@ -7,8 +7,12 @@ export default function OurStory() {
   const [mounted, setMounted] = useState(false);
 
   const romanticQuotes = [
-    "Aku adalah laki-laki biasa yang datang dengan tulus menyayangimu selalu ❤️",
-    "Aku akan selalu mengusahakan segala sesuatu buat kamu 💕",
+    "Gimana hari ini cantikku? 💕",
+    "Maaf ya kalau aku belum bisa kasih kamu yang lebih hehehe 💖",
+    "Semoga dengan hadiah kecil dari aku bisa buat kamu bahagia 💕",
+    "Ohh iyaa  💕",
+    "Aku ini adalah laki-laki biasa yang datang dengan tulus menyayangimu selalu ❤️",
+    "Aku akan selalu mengusahakan apapun itu buat kamu 💕",
     "Terima kasih ya sudah menjadi hal terpenting yang selalu buat aku bahagia 💖",
     "Maaf ya jika perjuangan dan usahaku masih belum seberapa. Aku akan terus berusaha buat kamu jadi wanita paling bahagia 💞",
     "I LOVE YOU 💕",
