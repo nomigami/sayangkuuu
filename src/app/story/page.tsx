@@ -73,7 +73,7 @@ export default function OurStory() {
     >
       {/* 💌 Card Utama */}
       <motion.div
-        className="relative z-10 w-[90%] sm:w-[85%] md:w-[70%] lg:w-[55%] text-center bg-black/50 backdrop-blur-sm rounded-2xl px-6 sm:px-10 py-10 sm:py-14 mt-24 shadow-2xl border border-white/20"
+        className="relative z-10 w-[90%] sm:w-[85%] md:w-[70%] lg:w-[55%] text-center bg-black/50 backdrop-blur-sm rounded-2xl px-6 sm:px-10 py-30 sm:py-14 mt-40 shadow-2xl border border-white/20"
         initial={{ opacity: 0, y: 30, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
@@ -116,6 +116,14 @@ export default function OurStory() {
             Next 💌
           </motion.button>
         )}
+        
+             <p className= "text-1xl font-stretch-75% items-center gap-2 py-3">
+            klik dulu sampai selesai yang sayang
+        </p>
+        
+
+       
+
 
         {/* Animasi Swipe muncul setelah teks terakhir */}
         {isLast && (
