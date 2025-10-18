@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function OurStory() {
@@ -69,18 +69,36 @@ export default function OurStory() {
     >
       {/* 💌 Card Utama */}
       <motion.div
-        className="relative z-10 w-[90%] sm:w-[85%] md:w-[70%] lg:w-[55%] text-center bg-black/50 backdrop-blur-sm rounded-2xl px-6 sm:px-10 py-10 sm:py-14 mt-24 shadow-2xl border border-white/20"
+        className="relative z-10 w-[90%] sm:w-[85%] md:w-[70%] lg:w-[55%] text-center bg-black/50 backdrop-blur-sm rounded-2xl px-6 sm:px-10 py-10 sm:py-14 mt-30 shadow-2xl border border-white/20"
         initial={{ opacity: 0, y: 30, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
       >
-        <h1 className="text-3xl sm:text-4xl font-bold drop-shadow-md mb-6">
+        {/* Judul dengan animasi */}
+        <motion.h1
+          className="text-3xl sm:text-4xl font-bold drop-shadow-md mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+        >
           Haiii 💖
-        </h1>
+        </motion.h1>
 
-        <p className="text-lg sm:text-2xl italic leading-relaxed mb-8 drop-shadow-lg">
-          {romanticQuotes[index]}
-        </p>
+        {/* Animasi teks quote */}
+        <AnimatePresence mode="popLayout">
+          <motion.p
+            key={index}
+            className="text-lg sm:text-3xl poopins leading-9 mb-4 drop-shadow-lg"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 2, y: 0 }}
+            exit={{ opacity: 1, y: -20 }}
+            transition={{ duration: 1 }}
+            whileTap={{scale : 1}}
+
+          >
+            {romanticQuotes[index]}
+          </motion.p>
+        </AnimatePresence>
 
         {/* Tombol Next */}
         {!isLast && (
@@ -89,6 +107,9 @@ export default function OurStory() {
             whileTap={{ scale: 0.95 }}
             onClick={nextQuote}
             className="mt-6 px-8 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-full font-semibold shadow-lg transition"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
           >
             Next 💌
           </motion.button>
@@ -131,7 +152,7 @@ export default function OurStory() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
-              <h2 className="text-3xl font-bold mb-4 drop-shadow-lg">💞</h2>
+              <h2 className="text-3xl font-bold mb-4 drop-shadow-lg">MY LOVE 💞</h2>
               <p className="text-base sm:text-lg leading-relaxed drop-shadow-md">
                 {item.text}
               </p>
