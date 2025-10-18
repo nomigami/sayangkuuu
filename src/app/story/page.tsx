@@ -88,7 +88,7 @@ export default function OurStory() {
         <AnimatePresence mode="popLayout">
           <motion.p
             key={index}
-            className="text-lg sm:text-3xl poopins leading-7 mb-10 drop-shadow-lg"
+            className="text-lg sm:text-1xl italic leading-10 mb-10 drop-shadow-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -159,8 +159,8 @@ export default function OurStory() {
             <motion.img
               src={item.img}
               alt="our memory"
-              className="w-52 h-64 sm:w-64 sm:h-80 md:w-80 md:h-96 object-cover rounded-3xl shadow-2xl border border-white/20"
-              initial={{ opacity: 0, scale: 0.8 }}
+              className="w-52 h-64 sm:w-64 sm:h-80 md:w-80 md:h-90 object-cover rounded-3xl shadow-2xl border border-white/20"
+              initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
             />
